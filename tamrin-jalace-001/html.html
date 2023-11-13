@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html dir="ltr">
+    <head>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+       
+        <h2 class="color1">.color1</h2>
+        <h2 class="color2">.color2</h2>
+
+        <h2 class="color1 color2">.color1.color2</h2>
+
+        <ul>
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+        </ul>
+
+        <div class="color1">
+            <h2 class="color2">.color1 .color2</h2>
+            <p>all p elements where the parent is a div element </p>
+            <p>all p elements where the parent is a div element </p>
+            <span>
+                <p>all p elements inside span element </p>
+                <p>all p elements inside span element </p>
+            </span>
+        </div>
+
+        <!-- <p>the first p element that is placed immediately after div elements </p> -->
+        <!-- <p>p without any div as parent </p> -->
+        <!-- <p>salam</p> -->
+
+        <ul>
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+        </ul>
+
+        <p>the first p element that is placed immediately after div elements </p>
+
+        <div>its just a div</div>
+        <p>the first p element that is placed immediately after div elements </p>
+        <p>p without any div as parent </p>
+
+        <ul>
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+        </ul>
+        <hr>
+
+        <div class="navbar">
+            <a href="#link1">Home</a>
+            <a href="#link2">News</a>
+            <a href="#link3">Games</a>
+            <div class="dropdown">
+                <button class="dropbtn">Dropdown by hovering this icon 
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="#Link1">Link 1</a>
+                  <a href="#Link2">Link 2</a>
+                  <a href="#Link3">Link 3</a>
+                </div>
+              </div> 
+        </div>
+        <hr>
+
+        <div style="direction: rtl; width: 600px; height: auto; background-color: dimgray;">
+            <table>
+                <thead>
+                    <tr>
+                        <td>First Name</td>
+                        <td>Last Name</td>
+                        <td>Mobile</td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td rowspan="2"></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" rowspan="2"></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+                
+            </table>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,142 @@
+
+/* style haye avalin tamrin */
+body {
+    background-color: whitesmoke;
+}
+.color1 {
+    color: red;
+}
+
+.color2 {
+    color: greenyellow;
+}
+
+.color1.color2 {
+    color: aqua;
+}
+
+.color1 .color2 {
+    color: purple;
+}
+
+p {
+    color: black;
+}
+
+div > p {
+    color: blue;
+}
+
+span > p {
+    background-color: black;
+    color: darkorange;
+}
+
+div + p {
+    color: deeppink;
+}
+
+p ~ ul {
+    background-color: rgb(10, 218, 24);
+}
+
+/* جمله ی زیر بعد از هر پی تکرار شود */
+p::after { 
+    background-color: rgb(0, 255, 38);
+    content: " - rahkar is here";
+    color: rgb(0, 0, 0);
+}
+
+table {
+    background-color: red;
+    border: 1px solid;
+    width: 400px;
+    height: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+thead, tfoot {
+    background-color: aqua;
+}
+
+tbody {
+    background-color: white;
+}
+
+td {
+    border: 1px solid;
+    width: 100px;
+    height: 100px;
+}
+
+
+/* navbar & dropdown */
+.navbar {
+    overflow: hidden;
+    background-color: #000000;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: rgb(219, 18, 182);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: rgb(0, 225, 255);
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+  
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
