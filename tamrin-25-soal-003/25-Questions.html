@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="./myScript.js"></script>
+        <link rel="stylesheet" href="./mystyle.css">
+    </head>
+    <body>
+        <!-- <div class="question">
+            <h2>1 - Please enter 5 number</h2>
+            <label for="number1">enter 1st number</label>
+            <input type="number" name="number1" id="number1" onchange="firstQuestion()">
+
+            <label for="number2">enter 2nd number</label>
+            <input type="number" name="number2" id="number2" onchange="firstQuestion()">
+
+            <label for="number3">enter 3rd number</label>
+            <input type="number" name="number3" id="number3" onchange="firstQuestion()">
+
+            <label for="number4">enter 4th number</label>
+            <input type="number" name="number4" id="number4" onchange="firstQuestion()">
+
+            <label for="number5">enter 5th number</label>
+            <input type="number" name="number5" id="number5" onchange="firstQuestion()">
+            
+            <div style="margin-top: 10px;">
+                <button type="button" id="button-first-question" onclick="">click here for result</button>
+            </div>
+            
+        </div> -->
+
+
+
+        <div class="question">
+            <h2>2 - نمایش اعداد زوج بین 100 تا 1000 </h2>
+            <button onclick="evenNumbers()">click here</button>
+            <div id="evenNumbers" style="background-color: rgb(225, 255, 91); width: auto; border-radius: 7px; text-align: center;"></div>
+        </div>
+
+
+
+        <div class="question">
+            <h2>3 - توان 2 و توان 3 و رادیکال اعداد یک تا بیست</h2>
+            <button onclick="tavan()">Click here</button>
+            <table id="tavan">
+                <tr>
+                    <th>عدد</th>
+                    <th>توان 2</th>
+                    <th>توان 3</th>
+                    <th>رادیکال</th>
+                </tr>
+            </table>
+        </div>
+
+
+
+        <div class="question">
+            <h2>4 - عددی را وارد کنید و سپس اعداد فرد از یک تا آن را مشاهده کنید</h2>
+            <input type="number" id="inputForOddNumbers" onchange="oddNumbers()">
+            <div id="oddNumbers" style="background-color: darkorange; width: 500px; border-radius: 7px;"></div>
+        </div>
+
+
+
+        <div class="question">
+            <h2>5 - محاسبه فاکتوریل عدد دلخواه</h2>
+            <input type="number" id="fuctorielInput" onchange="fuctoriel()">
+            <p style="background-color: whitesmoke; width: 250px; text-align: center;" >جواب فاکتوریل برابر است با <span id="fuctorielResult"></span></p>
+        </div>
+
+
+
+        <div class="question" style="direction: rtl;">
+            <h2>7 - بخش پذیری 2 عدد دلخواه برهم</h2>
+
+            <label for="num1BakhshPazir">اولین عدد خود را وارد کنید</label>
+            <input type="number" id="num1BakhshPazir" onchange="BakhshPazirBodan()">
+
+            <label for="num2BakhshPazir">دومین عدد خود را وارد کنید</label>
+            <input type="number" id="num2BakhshPazir" onchange="BakhshPazirBodan()">
+            <p id="resultBakhshPazirBodan" style="font-size: 20px;"></p>
+        </div>
+
+
+
+        <div class="question">
+            <h2>8 - اعداد کوچتر از 300 که هم بر 3 و هم بر 7 بخش پذیر هستند</h2>
+
+            <h4 style="direction: rtl;" onclick="BakhshPazirBodanBar3and7()">برای مشخص شدن نتیجه اینجا را کلیک کنید</h4>
+
+            <label for="3and7">اعدادی که هم بر 3 و هم بر 7 بخش پذیر هستند : </label>
+            <p id="3and7" style="background-color: darkorange; width: 500px; border-radius: 7px;"></p>
+            
+            <label for="tedad3and7">تعداد این اعداد برابر است با : </label>
+            <p id="tedad3and7" style="background-color: darkorange; width: 500px; border-radius: 7px;"></p>
+
+            <label for="sum3and7">جمع این اعداد برابر است با : </label>
+            <p id="sum3and7" style="background-color: darkorange; width: 500px; border-radius: 7px;"></p>
+        </div>
+
+
+
+
+
+        <div class="question">
+            <h2>9 - تمام مقسوم علیه های یک عدد دلخواه</h2>
+            <input type="number" id="inputNumDelkhah" onchange="maghsomAlayhe()">
+            <div style="background-color: rgb(215, 255, 86); width: 500px; border-radius: 7px;">
+                <p id="resultMaghsomAlayhe" style="margin: 7px;"></p>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="question">
+            <h2>10 -	برنامه بنویسید که اعداد سه رقمی را که شرط زیر را دارند چاپ کند</h2>
+            <p style="direction: rtl;">در صورتی که هر کدام از رقم های اعداد سه رقمی را به توان سه برسانیم و آنها را باهم جمع کنیم دوباره به خود آن عدد می رسیم</p>
+            <div>
+                <button style="margin: 15px;" onclick="question10()">برای مشاهده نتیجه کلیک کنید </button>
+                <div style="direction: ltr; background-color:  rgb(215, 255, 86);" id="question10"></div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="question">
+            <h2>11 - تعداد رقم های عدد ورودی</h2>
+            <input type="number" id="inputQuestion11">
+            <button style="margin: 15px;" onclick="question11()">برای مشاهده نتیجه کلیک کنید </button>
+            <div style="margin: 15px; background-color: rgb(255, 123, 255); direction: rtl; padding: 7px; width: 500px; text-align: center;">
+                <p>تعداد رقم ها برابر است با : <span id="tedadRaghamHa"></span></p>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="question">
+            <h2 onclick="question12()">12-	برنامه بنویسید که عدد های سه رقمی که رقم یکان آنها برابر با چهار باشد را نمایش دهد و همچنین مجموع این اعداد را هم به صورت جداگانه چاپ نماید</h2>
+            <div id="resultQuestion12"></div>
+            <div style="direction: rtl;">جمع اعداد برابر است با <span  id="counttQuestion12">0</span></div>
+        </div>
+
+
+
+
+
+        <div class="question">
+            <h2>13 -	یک عدد از ورودی گرفته و رقم های یکان و دهگان و صدگان آن عدد را نمایش دهید</h2>
+            <input type="number" id="inputQuestion13" onchange="question13()">
+            <div>
+                <table  id="resultQuestion13">
+                    <tr>
+                        <th>صدگان</th>
+                        <th>دهگان</th>
+                        <th>یکان</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="question">
+            <h2>15 -	یک عدد سه رقمی از ورودی دریافت کنید و اعداد آن را به صورت معکوس نمایش دهید</h2>
+            <input type="number" id="inputQuestion15" onchange="question15()">
+            <div id="resultQuestion15"></div>
+        </div>
+
+
+
+
+
+        <div class="question">
+            <h2>16 -	اعداد چهار رقمی ای که با شرط معادله زیر برقرار باشند را چاپ کنید</h2>
+            <p>
+                5231
+                رقم اول a => 1
+                رقم دوم  b => 3
+                رقم سوم     c =>2
+                رقم چهارم d => 5
+                </p>
+                <p>شرط معادله :   b+c=a+d</p>
+            <button onclick="question16()">click here</button>
+            <div  id="resultQuestion16"></div>
+        </div>
+
+
+
+
+
+        <div class="question">
+            <h2>17 -	برنامه بنویسید که اعداد چهار رقمی که با شرط معدله زیر برقرار باشند را چاپ کند</h2>
+            <p>
+                5231
+                دو رقم اول a => 31
+                دو رقم دوم  b => 52
+                شرط معادله :  عدد ورودی = (a+b)^2
+            </p>
+            <button  onclick="question17()">مشاهده نتیجه </button>
+            <div id="resultQuestion17"></div>
+        </div>
+
+
+
+
+
+        <div class="question">
+            <h2>18 -	برنامه ای بنویسید که تمام اعداد اول سه رقمی (اعدادی که تنها دو مقسوم علیه دارند: 1 و خودشان)  را چاپ کند </h2>
+            <button onclick="question18()">مشاهده نتیجه </button>
+            <div id="resultQuestion18" style="background-color: lawngreen;"></div>
+        </div>
+
+
+
+
+
+        <div class="question">
+            <h2>19 -	برنامه بنویسید که تمام اعداد سه رقمی که عدد یکان و صدگان آنها اعداد اول باشیند را چاپ کند</h2>
+            <button onclick="question19()">click here</button>
+            <div id="question19" class="question19">برای مشاهده نتیجه ، دکمه بالا را کلیک کنید </div>
+        </div>
+
+
+
+
+
+        <div class="question">
+            <h2>20 -	برنامه بنویسید که تمام اعداد 1 تا 999 را بررسی کند و اعدادی را که مجموع مقسوم علیه‌هایشان دقیقاً دو برابر خود آن عدد است را چاپ کند</h2>
+            <button onclick="question20()">click here</button>
+            <div id="question20" class="question20">برای مشاهده نتیجه ، روی دکمه بالا کلیک کنید </div>
+        </div>
+
+
+
+
+
+        <div class="question">
+            <h2>21 -	برنامه ای بنویسید که اعداد 10 تا 1500 را بررسی کند و در صورتی که مجموع مقسوم علیه های یک عدد برابر عدد دیگری در این بازه باشد و بلعکس مجموع مقسوم علیه های آن عدد نیز برابر با عدد قبلی باشد</h2>
+            <button onclick="question21()">Click here</button>
+            <div id="question21" style="background-color: gold; border-radius: 7px; margin: 5px; padding: 5px; text-align: center;">برای مشاهده نتیجه ، روی دکمه بالا کلیک کنید و سپس به کنسول مراجعه کنید </div>
+        </div>
+    </body>
+</html>

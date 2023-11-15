@@ -1,0 +1,43 @@
+
+.question {
+    margin: 10px;
+    background-color: lightseagreen;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+h2 {
+    color: whitesmoke;
+    direction: rtl;
+}
+
+table {
+    background-color: rgb(227, 255, 88);
+    border: 1px solid;
+    width: 450px;
+    height: auto;
+    margin: auto;
+    text-align: center;
+}
+
+th {
+    background-color: #fff;
+    border: 1px solid;
+    width: auto;
+    height: auto;
+}
+
+td {
+    color: black;
+    background-color: #fff;
+    border: 1px solid;
+    width: auto;
+    height: auto;
+}
+
+.question20,.question19 {
+    background-color: chartreuse;
+    border-radius: 7px;
+    padding: 5px;
+    margin-top: 5px;
+}
