@@ -5,28 +5,15 @@
         <link rel="stylesheet" href="./mystyle.css">
     </head>
     <body>
-        <!-- <div class="question">
-            <h2>1 - Please enter 5 number</h2>
-            <label for="number1">enter 1st number</label>
-            <input type="number" name="number1" id="number1" onchange="firstQuestion()">
-
-            <label for="number2">enter 2nd number</label>
-            <input type="number" name="number2" id="number2" onchange="firstQuestion()">
-
-            <label for="number3">enter 3rd number</label>
-            <input type="number" name="number3" id="number3" onchange="firstQuestion()">
-
-            <label for="number4">enter 4th number</label>
-            <input type="number" name="number4" id="number4" onchange="firstQuestion()">
-
-            <label for="number5">enter 5th number</label>
-            <input type="number" name="number5" id="number5" onchange="firstQuestion()">
-            
-            <div style="margin-top: 10px;">
-                <button type="button" id="button-first-question" onclick="">click here for result</button>
+        <div class="question">
+            <h2>1 -	پنج عدد از ورودی دریافت کند و تعداد عدد های بزرگتر از صفر را در خروجی نشان دهد و برای عدد های کوچیکتر از صفر، مجموع اعداد انها را نمایش دهد</h2>
+            <button onclick="question01()">Click here</button>
+            <div>
+                <p id="namayeshNumbers"></p>
+                <p id="tedadNmbersMosbat"></p>
+                <p id="sumNumbersManfi"></p>
             </div>
-            
-        </div> -->
+        </div>
 
 
 
@@ -245,6 +232,16 @@
             <h2>21 -	برنامه ای بنویسید که اعداد 10 تا 1500 را بررسی کند و در صورتی که مجموع مقسوم علیه های یک عدد برابر عدد دیگری در این بازه باشد و بلعکس مجموع مقسوم علیه های آن عدد نیز برابر با عدد قبلی باشد</h2>
             <button onclick="question21()">Click here</button>
             <div id="question21" style="background-color: gold; border-radius: 7px; margin: 5px; padding: 5px; text-align: center;">برای مشاهده نتیجه ، روی دکمه بالا کلیک کنید و سپس به کنسول مراجعه کنید </div>
+        </div>
+
+
+
+
+
+        <div class="question">
+            <h2>24 -	برنامه ای بنویسید که یک رشته از ورودی بگیرد و معکوس آن را چاپ کند</h2>
+            <input type="text" placeholder="متن خود را وارد کنید " id="inputQuestion24" onchange="question24()">
+            <div id="resultQuestion24"></div>
         </div>
     </body>
 </html>

@@ -1,22 +1,32 @@
 
-// function firstQuestion () {
-//     num1=document.getElementById("number1").value
-//     num2=document.getElementById("number2").value
-//     num3=document.getElementById("number3").value
-//     num4=document.getElementById("number4").value
-//     num5=document.getElementById("number5").value
-//     // console.log(num1,num2,num3,num4,num5)
-// }
 
-// function x(num1,num2,num3,num4,num5) {
-//     var a=0
-//     var m=0
-//     if(num1>0) {
-//         a+=num1
-//     }else if (num1<0) {
-//         m+=num1
-//     }
-// }
+function question01() {
+    alert("لطفا 5 عدد وارد کنید")
+    let array=[]
+    let posetive=0
+    let negetive=0
+    for(let count=0; count<5; count++) {
+        let numbers=prompt("اعداد خود را وارد کنید")
+        array.push(numbers)
+        if(numbers>0) {
+            posetive+=1
+        }else if (numbers<0) {
+            negetive=negetive-numbers
+        }
+    }
+    negetive=negetive*(-1)
+
+    // console.log(array);
+    // console.log("tedad posetives =",posetive);
+    // console.log("sum negetives =",negetive);
+
+    document.getElementById("namayeshNumbers").innerHTML =array
+    document.getElementById("tedadNmbersMosbat").innerHTML = posetive + " = تعداد اعداد مثبت"
+    document.getElementById("sumNumbersManfi").innerHTML = negetive + " = جمع اعداد منفی"   
+}
+
+
+
 
 
 
@@ -441,7 +451,48 @@ function question21() {
 
 
 
-var text="salam goje"
-var revers=text.reverse()
-console.log(text);
-console.log(revers);
+function question24() {
+    let text =document.getElementById("inputQuestion24").value
+    let result = ""
+    console.log(text);
+    for(let count=text.length-1; count>=0; count--) {
+        result+=text[count]
+    }
+    // console.log(result);
+    document.getElementById("resultQuestion24").innerHTML =result
+}
+
+
+
+
+
+// let howManyTimesDoYouWntToEnterNumber=prompt("چند تا عدد میخواهید وارد بکنید ؟")
+// let array=[]
+// let result=[]
+// for (let count=0; count<howManyTimesDoYouWntToEnterNumber; count++) {
+//     let numbers =prompt("اعداد خود را وارد کنید")
+//     array.push(numbers)
+// }
+// console.log(array);
+
+// for(let i=0; i<array.length; i++) {
+//     for(let c=i+1; c<=array.length; c++) {
+//         if(array[i]==array[c]) {
+//             for(let d=0; d<result.length; d++) {
+//                 if(array[i]==result[d]) {
+//                     result.push(array[i])
+//                 }
+//             }
+//         }
+//     }
+// }
+// console.log(result);
+// console.log(result.length);
+
+
+
+
+
+
+
+
