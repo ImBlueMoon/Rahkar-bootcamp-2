@@ -1,0 +1,11 @@
+<p>todo-list-showing works!</p>
+
+<ul>
+  <li *ngFor="let item of todoListInput; let i = index">
+    <p [class.TaskDone]="taskIsDone[i]">
+      {{ item }}
+      <button (click)="TaskIsDone(i)">Click here if u Done this Task</button>
+      <button (click)="deletThisTask(i)">Delete</button>
+    </p>
+  </li>
+</ul>
