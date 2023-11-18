@@ -1,0 +1,5 @@
+
+<app-box-001 *ngIf="isShowing"></app-box-001>
+<app-box-002 [LastNameInput]="lastnameInputForBox002"></app-box-002>
+<app-box-003 (LastNameOutPut)="onHandleLastName($event)" (FirstNameOutPut)="onHandleFirststName($event)"></app-box-003>
+
