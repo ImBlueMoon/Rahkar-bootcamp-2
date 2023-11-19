@@ -21,7 +21,8 @@ export class TodoListShowingComponent {
   }
 
   deletThisTask(index : number):void {
-    this.todoListInput.splice(index, 1)
+    this.todoListInput.splice(index,1)
     this.updateToDoTask.emit(this.todoListInput)
   }
 }
+

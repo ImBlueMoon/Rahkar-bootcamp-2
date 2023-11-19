@@ -1,11 +1,26 @@
+<style>
+  div {
+    margin: 15px;
+    padding: 10px;
+    background-color: darkseagreen;
+    border-radius: 15px;
+  }
+  button {
+    margin-left: 3px;
+  }
+</style>
 <p>todo-list-showing works!</p>
 
-<ul>
-  <li *ngFor="let item of todoListInput; let i = index">
-    <p [class.TaskDone]="taskIsDone[i]">
-      {{ item }}
-      <button (click)="TaskIsDone(i)">Click here if u Done this Task</button>
-      <button (click)="deletThisTask(i)">Delete</button>
-    </p>
-  </li>
-</ul>
+<div>
+  <h2>Your Tasks : </h2>
+  <ul>
+    <li *ngFor="let item of todoListInput; let i = index">
+      <p [class.TaskDone]="taskIsDone[i]">
+        {{ item }}
+        <button (click)="TaskIsDone(i)">Click here if u Done this Task</button>
+        <button (click)="deletThisTask(i)">Delete Task</button>
+      </p>
+    </li>
+  </ul>
+</div>
+

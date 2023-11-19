@@ -1,8 +1,31 @@
-<p>todo-textcomponent works!</p>
-<form>
+<style>
+  #form {
+    background-color: black;
+    border-radius: 15px;
+    padding: 15px;
+    width: auto;
+    height: auto;
+  }
+  label {
+    font-size: 20px;
+    margin: 7px;
+    color: orange;
+  }
+  input {
+    width: 200px;
+    height: 20px;
+  }
+  button {
+    margin-left: 15px;
+  }
+</style>
+<!-- <p>todo-textcomponent works!</p> -->
+<form id="form">
   <div>
-    <label for=""></label>
-    <input (input)="onChangeText($event)" type="text" name="todotext" placeholder="write here your task">
+    <div>
+      <label for="todotext">What do u want to do ? </label>
+      <input (input)="onChangeText($event)" type="text" name="todotext" placeholder="write your task here ... ">
+      <button type="button" (click)="onHandleClick($event)">Click here</button>
+    </div>
   </div>
-  <button type="button" (click)="onHandleClick($event)">Click here</button>
 </form>
