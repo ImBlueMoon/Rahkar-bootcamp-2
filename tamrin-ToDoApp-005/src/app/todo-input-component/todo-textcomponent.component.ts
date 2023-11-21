@@ -19,7 +19,7 @@ export class TodoTextcomponentComponent {
   onChangeText(event : any) {
     this.inputValue = event.target.value ;
   }
-  onHandleClick(event : any) {
+  onHandleClick() {
     this.ToDoValueOutPut.emit(this.inputValue)
   }
 

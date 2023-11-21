@@ -1,4 +1,4 @@
-import { Component, Input, EventEmitter, Output } from '@angular/core';
+import { Component, Input} from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -10,19 +10,24 @@ import { CommonModule } from '@angular/common';
 })
 export class TodoListShowingComponent {
 
-  taskIsDone : boolean [] = [];
-  // menuList : any [] = [];
 
-  @Input() todoListInput !: any [] ;
-  @Output() updateToDoTask = new EventEmitter();
+  menuList : any [] = [];
 
-  TaskIsDone(index : number):void {
-    this.taskIsDone[index] = !this.taskIsDone[index];
+  @Input() todoListInput !: string ;
+
+
+  ngOnChanges() {
+    if (this.todoListInput)
+    this.menuList.push({title : this.todoListInput, done : false})
   }
 
-  deletThisTask(index : number):void {
-    this.todoListInput.splice(index,1)
-    this.updateToDoTask.emit(this.todoListInput)
+  TaskIsDone(index : number) {
+    this.menuList[index].done = !this.menuList[index].done;
+  }
+
+  deletThisTask(index : number) {
+    this.menuList.splice(index,1)
+    // this.updateToDoTask.emit(this.menuList)
   }
 }
 

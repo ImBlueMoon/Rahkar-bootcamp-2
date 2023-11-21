@@ -9,18 +9,15 @@
     margin-left: 3px;
   }
 </style>
-<p>todo-list-showing works!</p>
 
 <div>
   <h2>Your Tasks : </h2>
-  <ul>
-    <li *ngFor="let item of todoListInput; let i = index">
-      <p [class.TaskDone]="taskIsDone[i]">
-        {{ item }}
-        <button (click)="TaskIsDone(i)">Click here if u Done this Task</button>
-        <button (click)="deletThisTask(i)">Delete Task</button>
-      </p>
+  <ol>
+    <li *ngFor="let item of menuList; let i = index" [ngClass]="{'TaskDone': item.done}">
+      {{ item.title }}
+      <button (click)="TaskIsDone(i)">Click here if u Done this Task</button>
+      <button (click)="deletThisTask(i)">Delete Task</button>
     </li>
-  </ul>
+  </ol>
 </div>
 

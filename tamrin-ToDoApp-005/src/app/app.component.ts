@@ -15,16 +15,11 @@ export class AppComponent {
   title = 'tamrin-ToDoApp-005';
 
 
-  todoList : any [] = []
+  todoText !: string
 
   onHandleToDoValue(event : any) {
-    console.log(event);
-    this.todoList.push(event)
-  }
-
-  updateTodoValue(event : any) {
-    this.todoList = event;
-    console.log(this.todoList);
+    // console.log(event);
+    this.todoText=event
   }
 
 }
