@@ -94,40 +94,55 @@ function fuctoriel() {
 
 
 
-// var a1=12
-// var a2=30
-// var a11=[]
-// var a22=[]
-// for (i=a1; i>=1; i--) {
-//     if (a1%i ==0) {
-//         a11+=" "+i
-//     }
-// }
-// console.log(a11)
+function question06 () {
+   let number1 =document.getElementById("question06num1").value
+   let number2 =document.getElementById("question06num2").value
+   let result = []
+
+   let numArray2 =[]
+   let numArray1 =[]
+   
+   for (let count=number1; count>=1; count--) {
+        if(number1%count==0) {
+            numArray1.push(count) 
+        //    console.log("salam 1 = " , count);
+        //    break;
+       }
+    }
+    for (let count=number2; count>=1; count--) {
+        if(number2%count==0) {
+            numArray2.push(count) 
+        //    console.log("salam 2 = " , count);
+        //    break;
+       }
+    }
+    console.log(numArray1);
+    console.log(numArray2);
 
 
-// for (w=a2; w>=1; w--) {
-//     if (a2%w ==0) {
-//         a22+=" "+w
-//     }
-// }
-// console.log(a22)
+   if (number1 > number2) {
+    for (let count=number2; count>=1; count--) {
 
+        if(number2%count==0 && number1%count==0) {
+            // numArray2.push(count) 
+            result.push(count);
+            console.log("برزگ ترین مقسوم علیه مشترک برابراست با  = " , count);
+            break;
+        }
+    }
+   }else {
+    for (let count=number1; count>=1; count--) {
 
-// function gcd_two_numbers(x, y) {
-//     if ((typeof x !== 'number') || (typeof y !== 'number')) 
-//       return false;
-//     x = Math.abs(x);
-//     y = Math.abs(y);
-//     while(y) {
-//       var t = y;
-//       y = x % y;
-//       x = t;
-//     }
-//     return x;
-//   }
-  
-//   console.log(gcd_two_numbers(4, 20));
+        if(number2%count==0 && number1%count==0) {
+            // numArray2.push(count) 
+            result.push(count);
+            console.log("برزگ ترین مقسوم علیه مشترک برابراست با  = " , count);
+            break;
+        }
+    }
+   }
+   document.getElementById("resultQuestion06").innerHTML=result
+}
 
 
 
@@ -265,6 +280,35 @@ function question13() {
 
 
 
+function question14 () {
+    let num = document.getElementById("inputQuestion14").value
+    let numToString = String(num)
+    let count = numToString.length
+    
+    let resultEvenNumbers = 0
+    let resultOddNumbers = 0
+    console.log(num);
+    
+    for (let c =0 ; c<count; c+=2) {
+        if (numToString[c]%2==0) {
+            // console.log("جایگاه زوج",numToString[c]);
+            resultEvenNumbers+=1
+        }
+    }
+    for (let c =1 ; c<=count; c+=2) {
+        if (numToString[c]%2==0) {
+            resultOddNumbers+=1
+            // console.log("جایگاه فرد",numToString[c]);
+        }
+    }
+    console.log("تعداد عدد های زوج در جایگاه های زوج  = ",resultEvenNumbers);
+    console.log("تعداد عدد های زوج در جایگاه های فرد = ",resultOddNumbers);
+}
+
+
+
+
+
 function question15() {
     let num=document.getElementById("inputQuestion15").value
     let argham=[]
@@ -378,7 +422,7 @@ function question19 () {
 
 
 
-// let num = 458
+
 function question20 () {
     let result = []
     for (let number=1; number<1000; number++) {
