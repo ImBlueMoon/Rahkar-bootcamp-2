@@ -494,6 +494,43 @@ function question21() {
 
 
 
+function question23() {
+    let num = document.getElementById("inputQuestion23").value
+    let y = 0
+    let mounth = 0
+    let day = 0
+    if (num <=186) {
+        if (num%31==0) {
+            day = 31
+            mounth = num/31
+        }else {
+            day = num%31
+            mounth = ((num-day)/31)+1
+        }
+    }else if (num > 186 && num <=336) {
+        let number = num-186 
+        if (number %30==0) {
+            day = 30
+            mounth= (number/30)+6
+        } else {
+            day = number%30
+            mounth = ((number-day)/30)+7
+        }
+    }else if (num > 365) {
+        alert("عدد وارد شده باید بین 1 و 365 باشد")
+        document.getElementById("inputQuestion23").innerHTML = 0
+    }
+    else {
+        day = num - 336
+        mounth = 12
+    }
+    console.log("day = ",day);
+    console.log("mounth = ",mounth);
+}
+
+
+
+
 
 function question24() {
     let text =document.getElementById("inputQuestion24").value
