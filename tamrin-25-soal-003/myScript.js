@@ -453,7 +453,7 @@ function question20 () {
 
 
 function question21() {
-    for(let num1=10; num1<1000; num1++) {
+    for(let num1=10; num1<1500; num1++) {
 
         let numArray01 =[]
         let numArray02 =[]
