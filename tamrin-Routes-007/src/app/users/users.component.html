@@ -1,0 +1,28 @@
+<p>users works!</p>
+<div class="container m-50" >
+  <table class="table table-striped">
+    <tbody>
+
+      <tr>
+        <th>Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>City of Birth</th>
+        <th colspan="2">University</th>
+      </tr>
+
+      <tr *ngFor="let item of users">
+        <td>{{ item.id }}</td>
+        <td>{{ item.Fname }}</td>
+        <td>{{ item.Lname }}</td>
+        <td>{{ item.City }}</td>
+        <td>{{ item.University }}</td>
+        <td>
+          <button (click)="onClick(item.id)" class="btn btn-success">برای مشاهده اطلاعات کلیک کنید</button>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>
+
