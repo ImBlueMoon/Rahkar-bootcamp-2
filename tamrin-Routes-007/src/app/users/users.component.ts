@@ -52,7 +52,7 @@ export class UsersComponent {
   ];
 
   onClick(id: string) {
-    this.router.navigate(['home/user', id])
+    this.router.navigate(['user', id])
   }
 
 }
