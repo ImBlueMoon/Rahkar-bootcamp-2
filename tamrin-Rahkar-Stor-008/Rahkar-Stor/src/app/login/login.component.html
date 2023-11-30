@@ -1,0 +1,17 @@
+<!-- <p>login works!</p> -->
+
+<div class="container bg-warning border border-dark rounded" style="margin-top: 15px; padding: 20px;">
+  <form [formGroup]="form">
+
+    <label for="username">Username</label>
+    <input type="text" class="form-control" id="username" formControlName="username">
+
+    <label for="password">Password</label>
+    <input type="password" class="form-control" id="password" formControlName="password">
+
+    <div class="text-center" style="margin-top: 15px;">
+      <button (click)="onClick()" type="button" class="btn btn-dark">Submit</button>
+    </div>
+
+  </form>
+</div>
