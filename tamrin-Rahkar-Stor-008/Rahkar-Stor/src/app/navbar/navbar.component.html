@@ -3,11 +3,20 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="padding: 12px;">
   <a class="navbar-brand" href="#" >Home</a>
     <div class="navbar-nav navbar-collapse justify-content-end">
-      <a class="nav-item nav-link"
-      *ngFor="let item of navbarItems"
-      (click)="onClick(item.link)">
-      {{ item.title }}
-    </a>
+      <div >
+        <a *ngIf="userIsLogin" class="nav-link" routerLink="login">Login</a>
+        <a *ngIf="!userIsLogin" class="nav-link" routerLink="">Profile</a>
+      </div>
+    <!-- <a href="" *ngIf="isLoggedIn">profile</a>
+    <a href="" *ngIf="!isLoggedIn">login</a> -->
     </div>
 </nav>
 
+<!-- <nav class="navbar navbar-expand-sm bg-warning">
+  <div class="container">
+    <ul class="nav navbar-nav">
+      <li><a class="nav-link" routerLink="login">Login</a></li>
+      <li><a class="nav-link" routerLink="home">Profile</a></li>
+    </ul>
+  </div>
+</nav> -->

@@ -1,27 +1,43 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,RouterModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
 
-  constructor(private router: Router) {}
+  userIsLogin =true
 
-  navbarItems: any[] = [
-    {
-      title: 'Login',
-      link: 'login'
-    }
-  ];
-
-  onClick(link: string) {
-    this.router.navigateByUrl(link);
+  constructor(private router: Router,  private AuthService: AuthService) {
+    this.AuthService.login$.subscribe((data: any) => {
+      console.log(data)
+      this.userIsLogin=data;
+    })
   }
+
+  // navbarItems: any[] = [
+  //   {
+  //     islogin: !this.userIsLogin,
+  //     title: 'Login',
+  //     link: 'login'
+  //   },
+  //   {
+  //     islogin:this.userIsLogin,
+  //     title: 'Profile',
+  //     link: 'profile'
+  //   }
+  // ];
+
+  // onClick() {
+
+  //   this.router.navigateByUrl(link);
+
+  // }
 
 }
