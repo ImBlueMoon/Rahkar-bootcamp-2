@@ -1,0 +1,22 @@
+<!-- <p>navbar works!</p> -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="padding: 12px;">
+  <ul class="navbar-nav">
+    <li>
+      <a class="navbar-brand nav-link" routerLink="">Home</a>
+    </li>
+    <li>
+      <a  class="nav-link" routerLink="products">Products</a>
+    </li>
+  </ul>
+    <div class="navbar-nav navbar-collapse justify-content-end">
+        <ul class="navbar-nav">
+          <li>
+            <a *ngIf="userIsLogin" class="nav-link" routerLink="profile">Profile</a>
+          </li>
+          <li>
+            <a  *ngIf="!userIsLogin" class="nav-link" routerLink="login">Login</a>
+          </li>
+        </ul>
+    </div>
+</nav>

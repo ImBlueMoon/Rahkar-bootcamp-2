@@ -11,6 +11,7 @@ export class AuthService {
   login$ = new Subject()
 
   constructor(private router: Router) {}
+
   users: any[] = [
     {
       id: 1,
@@ -33,11 +34,9 @@ export class AuthService {
   ];
 
   login(username: string, passowrd: string):any {
-    // this.login$.next(true);
     let user = this.users.filter(user =>user.username === username && user.passowrd === passowrd)
     if (user.length>0) {
       this.login$.next(true);
-      // this.router.navigate(['user',])
     }else {
       this.login$.next(false);
     }

@@ -1,10 +1,8 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule , ReactiveFormsModule , FormControl , FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { AuthService } from '../auth.service';
-import { Observable } from 'rxjs';
+import { Component } from '@angular/core';
+import { FormsModule , ReactiveFormsModule , FormBuilder, FormControl ,FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-
+import { AuthService } from '../../auth.service';
 
 @Component({
   selector: 'app-login',
@@ -17,28 +15,21 @@ export class LoginComponent {
 
   form!: FormGroup
 
-  constructor(private fb:FormBuilder , private AuthService: AuthService, private router: Router) {
+  constructor(private fb:FormBuilder , private router: Router , private AuthService: AuthService) {
     this.form = fb.group ({
       username : new FormControl('',Validators.required),
       password : new FormControl('',Validators.required),
     })
-
-    // this.AuthService.login$.subscribe((data) => {
-    //   // console.log(data)
-    // })
   }
 
   onClick() {
     let a = this.AuthService.login(this.form.value.username, this.form.value.password);
     // console.log(a);
     this.AuthService.login$.subscribe((data: any) => {
-      if (data== true) {
+      if (data == true) {
         this.router.navigateByUrl('');
       }
-
     })
-
   }
-
 
 }

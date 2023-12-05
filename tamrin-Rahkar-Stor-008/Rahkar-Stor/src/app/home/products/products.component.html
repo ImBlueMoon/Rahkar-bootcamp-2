@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="card-groups " style="display: flex;">
+    <div class="card" style="width: 25rem; height: auto; margin: 7px;padding: 5px;" *ngFor="let item of products">
+      <img src=" {{item.img1}} " alt=" {{item.alt}} ">
+      <div class="card-body">
+        <h5 class="card-title text-dark"> {{item.brand}} </h5>
+        <p class="card-text"> {{item.caption}} </p>
+      </div>
+      <h5 class="card-title text-danger"> {{item.price}} </h5>
+      <button class="btn btn-primary" style="width: auto; height: auto;" (click)="onClick(item.id)">See details</button>
+    </div>
+  </div>
+</div>
+
+
