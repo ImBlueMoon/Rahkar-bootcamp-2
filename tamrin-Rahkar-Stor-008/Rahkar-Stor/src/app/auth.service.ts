@@ -1,5 +1,4 @@
 import { Injectable } from "@angular/core";
-import { Router } from "@angular/router";
 import { Subject } from "rxjs";
 
 @Injectable ({
@@ -10,31 +9,32 @@ export class AuthService {
 
   login$ = new Subject()
 
-  constructor(private router: Router) {}
-
   users: any[] = [
     {
       id: 1,
-      name :'mohammad',
+      FirstName :'Mohammad',
+      LastName: 'Ahmadi',
       username: 'mohammad',
-      passowrd: '123'
+      password: '123'
     },
     {
       id:2,
-      name :'samaneh',
+      FirstName :'Samanhe',
+      LastName: 'Hasani',
       username: 'samaneh',
-      passowrd: '456'
+      password: '456'
     },
     {
       id: 3,
-      name :'zahra',
+      FirstName :'Zahra',
+      LastName: 'Amir Pour',
       username: 'amirpour',
-      passowrd: '789'
+      password: '789'
     }
   ];
 
-  login(username: string, passowrd: string):any {
-    let user = this.users.filter(user =>user.username === username && user.passowrd === passowrd)
+  login(username: string, password: string):any {
+    let user = this.users.filter(user =>user.username === username && user.password === password)
     if (user.length>0) {
       this.login$.next(true);
     }else {

@@ -1,1 +1,7 @@
-<p>profile works!</p>
+<div *ngFor="let item of usersList" style="margin: 10px; padding: 7px;">
+  <h3> Welcome dear {{ item.FirstName }} </h3>
+  <p> Your id is : {{ item.id }} </p>
+  <p> Your UserName is : {{ item.username }} </p>
+  <p> Your id Password : {{ item.password }} </p>
+</div>
+

@@ -1,8 +1,7 @@
 import { Routes } from '@angular/router';
 import { LoginComponent } from './home/login/login.component';
 import { HomeComponent } from './home/home.component';
-import { ProfileComponent } from './home/profile/profile.component';
-import { ProductsDetailsComponent } from './products-details/products-details.component';
+
 
 
 export const routes: Routes = [
@@ -20,13 +19,13 @@ export const routes: Routes = [
       },
       {
         path: 'profile',
-        component: ProfileComponent
+        loadComponent: () => import ('./home/profile/profile.component').then(m => m.ProfileComponent)
+      },
+      {
+        path: "product/:id",
+        loadComponent: () => import ('./products-details/products-details.component').then(m => m.ProductsDetailsComponent)
       }
     ]
-  },
-  {
-    path: "product/:id",
-    component: ProductsDetailsComponent,
   }
 
 ];
