@@ -1,0 +1,16 @@
+<!-- <router-outlet></router-outlet> -->
+<div class="container bg-info p-4" style="margin-top: 15px;">
+  <form [formGroup]="form">
+    <div class="row">
+      <div class="col-leg-1 col-12" style="margin-top: 5px;">
+        <input type="text" formControlName="text" class="form-control" placeholder="Type your text here ...">
+      </div>
+      <div class="col-leg-1 col-12" style="margin-top: 5px;">
+        <input type="text" formControlName="photo" class="form-control" placeholder="Please paste your picture link here">
+      </div>      <div class="col-leg-1 col-12" style="margin-top: 5px;">
+        <input type="text" formControlName="caption" class="form-control" placeholder="write your caption here">
+      </div>
+    </div>
+    <button (click)="submit()" type="submit" class="btn btn-warning mt-2">Send to the Telegram</button>
+  </form>
+</div>
