@@ -9,7 +9,7 @@ export class TelegramService {
 
   constructor(private http:HttpClient) {}
 
-  botToken = '6861916145:AAFo2i91fEJME0BIkxl7ec0kxCXJG8qVVJU'
+  botToken = 'ssssssssssss55555555555588888888884444444dddddddddaaa'
   telegramAPIsendMessage = `https://api.telegram.org/bot${this.botToken}/sendMessage`
   telegramAPIsendPhoto = `https://api.telegram.org/bot${this.botToken}/sendPhoto`
 

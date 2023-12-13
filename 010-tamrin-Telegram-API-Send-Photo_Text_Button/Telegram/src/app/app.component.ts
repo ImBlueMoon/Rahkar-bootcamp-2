@@ -30,7 +30,12 @@ export class AppComponent {
   submit() {
     if(this.form.valid)
     this.telegramService.sendMessage(this.chatId[0] , this.form.value.text).subscribe(data =>{}),
-    this.telegramService.sendPhoto(this.chatId[0] , this.form.value.photo , this.form.value.caption).subscribe(dataPhoto => {})
+    this.telegramService.sendPhoto(this.chatId[0] , this.form.value.photo , this.form.value.caption).subscribe(dataPhoto => {}),
+    this.form.setValue({
+      text :'',
+      photo :'',
+      caption :''
+    })
   }
 
 }
