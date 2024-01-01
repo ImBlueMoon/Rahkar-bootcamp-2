@@ -1,0 +1,28 @@
+<!-- <p>list-form works!</p> -->
+<div class="container">
+
+  <form [formGroup]="formList">
+    <div class="row mt-5">
+      <div class="col-8">
+        <input formControlName="title" type="text" class="form-control" placeholder="Write your shopping list here ...">
+      </div>
+      <div class="col-4">
+        <button (click)="onClick()" [disabled]="formList.invalid" type="submit" [class.btn-success]="this.submitType==0" [class.btn-warning]="this.submitType==1" class="btn"> @if (this.submitType==0) {Submit} @if (this.submitType==1) {Update} </button>
+      </div>
+    </div>
+  </form>
+
+
+
+  <div class="row">
+    <div class="col-12">
+      <app-list-item *ngFor="let item of shoppingList"
+      [list]="item"
+      (done)="onDoneList($event)"
+      (edited)="onEditList($event)"
+      (deleted)="onDeleteList($event)">
+      </app-list-item>
+    </div>
+  </div>
+
+</div>
