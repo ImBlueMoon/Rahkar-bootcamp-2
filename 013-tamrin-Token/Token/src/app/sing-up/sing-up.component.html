@@ -1,0 +1,8 @@
+<div class="container mt-3">
+  <form [formGroup]="form">
+    <input class="form-control m-1" placeholder="name" formControlName="name" type="text">
+    <input class="form-control m-1" placeholder="password" formControlName="password" type="text">
+    <button [disabled]="form.invalid" (click)="onSignUp()" class="btn btn-primary m-1">Sing Up</button>
+    <button [disabled]="form.invalid" (click)="onLogin()" class="btn btn-warning m-1">Login</button>
+  </form>
+</div>
