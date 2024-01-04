@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable , inject } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 
 
@@ -11,7 +12,7 @@ export class UserServices {
 
   // constructor(private http: HttpClient) {}
   http = inject(HttpClient)
-
+  router = inject(Router)
   private readonly _authStorageToken: string = "authToken";
   isLogin: boolean = false;
 
@@ -36,6 +37,24 @@ export class UserServices {
   setTokenToLocalStorage(token : string) {
     localStorage.setItem(this._authStorageToken, token);
     this.isLogin = true;
+  }
+
+  getTokenFromLocalStorage() : string {
+    return localStorage.getItem(this._authStorageToken) as string
+  }
+
+  removeTokenFromLocalStorage() {
+    localStorage.removeItem(this._authStorageToken);
+  }
+
+  checkUserAuthenticate() {
+    if (this.getTokenFromLocalStorage()) this.isLogin = true;
+  }
+
+  logout() {
+    this.removeTokenFromLocalStorage();
+    this.isLogin = false;
+    this.router.navigateByUrl("login");
   }
 
 }

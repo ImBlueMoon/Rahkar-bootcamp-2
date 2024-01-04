@@ -2,6 +2,8 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ReactiveFormsModule , FormBuilder , FormGroup , Validators} from '@angular/forms';
 import { UserServices } from './service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-sing-up',
@@ -12,7 +14,7 @@ import { UserServices } from './service';
 })
 export class SingUpComponent {
 
-  constructor(private fb: FormBuilder , private Service: UserServices) {}
+  constructor(private fb: FormBuilder , private Service: UserServices , private router: Router) {}
 
   form : FormGroup = this.fb.group({
     name:['' , Validators.required],
@@ -41,6 +43,7 @@ export class SingUpComponent {
       next: (data) => {
         // console.log(data);
         this.Service.setTokenToLocalStorage(data)
+        this.router.navigateByUrl("home")
 
       },
       error: (error) => {

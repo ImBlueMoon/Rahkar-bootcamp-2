@@ -1,0 +1,40 @@
+
+<form [formGroup]="form">
+    <!-- <input class="form-control m-1" placeholder="name" formControlName="name" type="text"> -->
+    <!-- <input class="form-control m-1" placeholder="password" formControlName="password" type="text"> -->
+    <!-- <button [disabled]="form.invalid" (click)="onSignUp()" class="btn btn-primary m-1">Sing Up</button> -->
+    <!-- <button [disabled]="form.invalid" (click)="onLogin()" class="btn btn-warning m-1">Login</button> -->
+
+
+  <div class="body">
+    <div class="ring">
+
+      <i style="--clr:#00ff0a;"></i>
+      <i style="--clr:#ff0057;"></i>
+      <i style="--clr:#fffd44;"></i>
+
+      <div class="login">
+
+        <h2>Do u have acc ?</h2>
+
+        <div class="inputBx">
+          <input placeholder="name" formControlName="name" type="text">
+        </div>
+
+        <div class="inputBx">
+          <input placeholder="password" formControlName="password" type="text">
+        </div>
+
+        <div class="inputBx">
+          <button class="btnlogin" [disabled]="form.invalid" (click)="onSignUp()" type="submit">Sing Up</button>
+          <button class="btnsignup" [disabled]="form.invalid" (click)="onLogin()" type="submit">Login</button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</form>
+
