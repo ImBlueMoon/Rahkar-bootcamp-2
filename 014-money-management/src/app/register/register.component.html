@@ -1,0 +1,33 @@
+<form [formGroup]="form">
+
+  <div class="body">
+    <div class="ring">
+
+      <i style="--clr:#00ff0a;"></i>
+      <i style="--clr:#ff0057;"></i>
+      <i style="--clr:#fffd44;"></i>
+
+      <div class="login">
+
+        <h2>Register</h2>
+
+        <div class="inputBx">
+         <input placeholder="mobile" formControlName="mobile" type="text">
+        </div>
+
+        <div class="inputBx">
+          <input placeholder="password" formControlName="password" type="text">
+        </div>
+
+        <div class="inputBx">
+          <button class="btnsignup" [disabled]="form.invalid" (click)="onSignUp()"  type="submit">Sign up</button>
+          <button class="btnsignup" [disabled]="form.invalid" (click)="onLogin()" type="submit">Login</button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</form>

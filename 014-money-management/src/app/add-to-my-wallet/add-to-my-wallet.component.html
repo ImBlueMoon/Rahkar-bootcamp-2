@@ -1,0 +1,27 @@
+<form [formGroup]="form">
+  <div class="body">
+    <div class="ring">
+
+      <i style="--clr:#00ff0a;"></i>
+      <i style="--clr:#ff0057;"></i>
+      <i style="--clr:#fffd44;"></i>
+
+      <div class="login">
+
+        <h2>Add to my wallet</h2>
+
+        <div class="inputBx">
+         <input placeholder="how much do u want to add ?" formControlName="bujet" type="number">
+        </div>
+
+        <div class="inputBx">
+          <button class="btnsignup" [disabled]="form.invalid" (click)="onHandleAddToWallet()"  type="submit">Add</button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</form>
+
