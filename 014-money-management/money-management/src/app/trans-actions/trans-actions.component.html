@@ -1,0 +1,19 @@
+<div class="container-fluid">
+  <div style="float:left; width: 50% ; height: 500px; background-color: #00e491;">
+    s
+  </div>
+  <div style="float:right; direction: rtl; width: auto ; height: 500px; background-color: #e1ff35;">
+    <form [formGroup]="form">
+      <div class="container mt-5 p-2">
+        <div style="margin: 2px; direction: rtl;">
+          <h3>عنوان خرید را تایپ کنید</h3>
+        <input type="text" formControlName="title" placeholder="مثلا خرید آجیل" style="width: 300px; text-align: center;">
+        </div>
+        <div style="margin: 2px;">
+        <input type="number" formControlName="amount" placeholder="مبلغ را به تومان وارد کنید" style="width: 300px; text-align: center;">
+        </div>
+        <button (click)="onHandleBuyProducts()" [disabled]="form.invalid" class="btn btn-primary" style="margin: 2px;">Click</button>
+      </div>
+    </form>
+  </div>
+</div>

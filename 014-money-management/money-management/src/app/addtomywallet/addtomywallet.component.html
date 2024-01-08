@@ -1,0 +1,14 @@
+<form [formGroup]="form">
+  <div class="container mt-5">
+    <div class="input-group col-8">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="">مبلغ را تایپ کنید</span>
+      </div>
+      <input formControlName="amount" type="number" class="form-control mr-5" placeholder="مبلغ به تومان">
+      <div class="input-group-append">
+        <button (click)="onHandleAddMoney()" [disabled]="form.invalid" class="btn btn-primary" type="button">ثبت</button>
+      </div>
+    </div>
+  </div>
+</form>
+

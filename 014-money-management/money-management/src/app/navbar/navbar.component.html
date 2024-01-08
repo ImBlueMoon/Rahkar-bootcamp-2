@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-sm">
+  <ul class="navbar-nav">
+    <li>
+      <a class="navbar-brand nav-link text-light" routerLink="">Home</a>
+    </li>
+    <li>
+      <a  class="nav-link navbar-nav text-light" routerLink="/transaction">Trans Actions</a>
+    </li>
+    <li>
+      <a  class="nav-link text-light" routerLink="/mywallet">Add to my wallet</a>
+    </li>
+  </ul>
+    <div class="navbar-nav navbar-collapse mr-auto justify-content-end">
+        <ul class="navbar-nav">
+          <li>
+            <a  class="nav-link text-light" routerLink="/register">Register</a>
+          </li>
+          <li>
+            <a   class="nav-link text-light" routerLink="/login">Login</a>
+          </li>
+          <li>
+            <a (click)="onHandleLogOut()" class="nav-link text-light">LogOut</a>
+          </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+
